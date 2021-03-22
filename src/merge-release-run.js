@@ -94,10 +94,9 @@ const run = async () => {
   exec(`git tag ${newVersion}`)
   exec(`echo "::set-output name=version::${newVersion}"`) // set action event.{STEP_ID}.output.version
 
-  /*
+  
   const env = process.env
   const remote = `https://${env.GITHUB_ACTOR}:${env.GITHUB_TOKEN}@github.com/${env.GITHUB_REPOSITORY}.git`
   exec(`git push ${remote} --tags`)
-  */
 }
 run()
